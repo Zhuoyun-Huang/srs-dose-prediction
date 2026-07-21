@@ -1,0 +1,4300 @@
+{
+  "SchemaVersion": "gbrt-shared-3out-v3",
+  "Generator": "MATLAB LSBoost (3 single-output ensembles bundled; CART x<thr)",
+  "TimestampUTC": "2025-09-22T23:22:23Z",
+  "RandomSeed": 18,
+  "Targets": {
+    "NumOutputs": 3,
+    "OutputNames": [
+      "V50",
+      "V60",
+      "V66_7"
+    ],
+    "OutputUnits": "cm3",
+    "Loss": "LSBoost",
+    "Weights": [
+      0.5,
+      1,
+      0.5
+    ]
+  },
+  "Features": {
+    "NumFeatures": 7,
+    "FeatureNames": [
+      "NoTumors",
+      "TotalDose",
+      "TotalVolume",
+      "AvgTumorVolume",
+      "AvgSurfaceArea",
+      "AvgEquivSA",
+      "MinShortestDistance"
+    ],
+    "Transforms": [
+      {
+        "Name": "none",
+        "Params": []
+      },
+      {
+        "Name": "none",
+        "Params": []
+      },
+      {
+        "Name": "none",
+        "Params": []
+      },
+      {
+        "Name": "none",
+        "Params": []
+      },
+      {
+        "Name": "none",
+        "Params": []
+      },
+      {
+        "Name": "none",
+        "Params": []
+      },
+      {
+        "Name": "none",
+        "Params": []
+      }
+    ],
+    "DataStats": [
+      {
+        "Name": "NoTumors",
+        "Mean": 3.22,
+        "Std": 1.5686989279433488,
+        "Min": 2,
+        "Max": 8,
+        "Unit": ""
+      },
+      {
+        "Name": "TotalDose",
+        "Mean": 25.67,
+        "Std": 2.8349315220466753,
+        "Min": 15,
+        "Max": 27.5,
+        "Unit": ""
+      },
+      {
+        "Name": "TotalVolume",
+        "Mean": 29.026459999999997,
+        "Std": 22.01490611827192,
+        "Min": 7.491,
+        "Max": 107.878,
+        "Unit": ""
+      },
+      {
+        "Name": "AvgTumorVolume",
+        "Mean": 10.801987095238093,
+        "Std": 9.8202986842701616,
+        "Min": 1.5181428571428572,
+        "Max": 53.9395,
+        "Unit": ""
+      },
+      {
+        "Name": "AvgSurfaceArea",
+        "Mean": 49.767783952380952,
+        "Std": 89.316160095168257,
+        "Min": 9.55457142857143,
+        "Max": 646.6305,
+        "Unit": ""
+      },
+      {
+        "Name": "AvgEquivSA",
+        "Mean": 19.849315904761905,
+        "Std": 12.049613790730396,
+        "Min": 5.9606666666666674,
+        "Max": 66.271999999999991,
+        "Unit": ""
+      },
+      {
+        "Name": "MinShortestDistance",
+        "Mean": 0.827048,
+        "Std": 0.46857540818867532,
+        "Min": 0,
+        "Max": 2.041,
+        "Unit": ""
+      }
+    ]
+  },
+  "Ensemble": {
+    "SharedTree": false,
+    "OutputEnsembles": [
+      {
+        "NumTrees": 42,
+        "LearningRate": 0.17,
+        "SubsampleRatio": 1,
+        "MaxDepth": 1,
+        "NumFeatures": 7,
+        "FeatureNames": [
+          "NoTumors",
+          "TotalDose",
+          "TotalVolume",
+          "AvgTumorVolume",
+          "AvgSurfaceArea",
+          "AvgEquivSA",
+          "MinShortestDistance"
+        ],
+        "InitialPrediction": 0,
+        "GoLeftIfLessOrEqual": false,
+        "ComparatorEpsilon": 0,
+        "Trees": [
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x3",
+              "Threshold": 39.215500000000006,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 46.842278947368392,
+              "LeafStd": 18.378226955359821,
+              "LeafSampleCount": 38
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 131.94152499999998,
+              "LeafStd": 41.075447348814109,
+              "LeafSampleCount": 12
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x3",
+              "Threshold": 59.1415,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 45.393408072222172,
+              "LeafStd": 22.94462726650281,
+              "LeafSampleCount": 45
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 149.76794075,
+              "LeafStd": 34.253500019705839,
+              "LeafSampleCount": 5
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x3",
+              "Threshold": 32.314,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 26.924118500787241,
+              "LeafStd": 14.171805821463053,
+              "LeafSampleCount": 34
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 87.5975447864521,
+              "LeafStd": 32.062813118729643,
+              "LeafSampleCount": 16
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x3",
+              "Threshold": 56.0475,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 29.663965887460432,
+              "LeafStd": 18.69524632062269,
+              "LeafSampleCount": 44
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 102.97991996800681,
+              "LeafStd": 34.42172531372352,
+              "LeafSampleCount": 6
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x3",
+              "Threshold": 31.1855,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 15.750940110667498,
+              "LeafStd": 13.12937923574067,
+              "LeafSampleCount": 32
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 60.674330672742762,
+              "LeafStd": 27.156610278523534,
+              "LeafSampleCount": 18
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x3",
+              "Threshold": 59.1415,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 20.374367590905024,
+              "LeafStd": 16.380682374447325,
+              "LeafSampleCount": 45
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 81.5945855998757,
+              "LeafStd": 34.253500019705996,
+              "LeafSampleCount": 5
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x3",
+              "Threshold": 21.175,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 5.7606334744770944,
+              "LeafStd": 10.478239723728839,
+              "LeafSampleCount": 26
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 39.575987059307643,
+              "LeafStd": 22.762085723979553,
+              "LeafSampleCount": 24
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x3",
+              "Threshold": 46.861999999999995,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 11.364426129810369,
+              "LeafStd": 12.961254338015838,
+              "LeafSampleCount": 41
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 49.636295697599827,
+              "LeafStd": 28.718641323105636,
+              "LeafSampleCount": 9
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x3",
+              "Threshold": 16.585,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": -2.9494424702175883,
+              "LeafStd": 4.9734188719340606,
+              "LeafSampleCount": 18
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 25.331391078826076,
+              "LeafStd": 19.444192445570916,
+              "LeafSampleCount": 32
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x6",
+              "Threshold": 28.713749999999997,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 7.6845657865109258,
+              "LeafStd": 10.951005918578092,
+              "LeafSampleCount": 43
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 42.614392532657071,
+              "LeafStd": 30.211931626939197,
+              "LeafSampleCount": 7
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x3",
+              "Threshold": 18.398,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": -2.7241487154323103,
+              "LeafStd": 5.9892421417976172,
+              "LeafSampleCount": 20
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 19.2111582614653,
+              "LeafStd": 18.361835215476773,
+              "LeafSampleCount": 30
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x3",
+              "Threshold": 59.1415,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 5.299893604074625,
+              "LeafStd": 9.65431831145369,
+              "LeafSampleCount": 45
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 38.928351970190292,
+              "LeafStd": 33.2462670556926,
+              "LeafSampleCount": 5
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x3",
+              "Threshold": 16.585,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": -4.1922900650566506,
+              "LeafStd": 4.9734188719340606,
+              "LeafSampleCount": 18
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 13.592653373734274,
+              "LeafStd": 16.898174836112283,
+              "LeafSampleCount": 32
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x3",
+              "Threshold": 59.1415,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 3.297536771684892,
+              "LeafStd": 8.6382729180655655,
+              "LeafSampleCount": 45
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 29.999781061723116,
+              "LeafStd": 33.246267055692606,
+              "LeafSampleCount": 5
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x6",
+              "Threshold": 28.713749999999997,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 2.101507558443493,
+              "LeafStd": 8.5259171900879931,
+              "LeafSampleCount": 43
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 22.471037830787374,
+              "LeafStd": 27.957358912238274,
+              "LeafSampleCount": 7
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x3",
+              "Threshold": 15.506999999999998,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": -5.2113494012299553,
+              "LeafStd": 4.6430270970294805,
+              "LeafSampleCount": 16
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 8.4982683816883,
+              "LeafStd": 15.270021570810227,
+              "LeafSampleCount": 34
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x3",
+              "Threshold": 32.314,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": -0.56693200578943448,
+              "LeafStd": 7.3061275265341274,
+              "LeafSampleCount": 34
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 11.868131367484427,
+              "LeafStd": 19.660070728607863,
+              "LeafSampleCount": 16
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x3",
+              "Threshold": 59.1415,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 1.1124416388296,
+              "LeafStd": 7.4130660588328521,
+              "LeafSampleCount": 45
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 18.310017921896659,
+              "LeafStd": 32.724230452268984,
+              "LeafSampleCount": 5
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x7",
+              "Threshold": 0.218,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 12.933886066144131,
+              "LeafStd": 19.973833402003358,
+              "LeafSampleCount": 9
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 0.027592560752672145,
+              "LeafStd": 9.78333042719435,
+              "LeafSampleCount": 41
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x3",
+              "Threshold": 11.448,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": -7.0203310028671471,
+              "LeafStd": 3.1129865761842943,
+              "LeafSampleCount": 11
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 4.4815062766166323,
+              "LeafStd": 13.511670715580765,
+              "LeafSampleCount": 39
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x6",
+              "Threshold": 30.148799999999998,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 0.06043850277099172,
+              "LeafStd": 6.9097495587242452,
+              "LeafSampleCount": 44
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 13.051906999329958,
+              "LeafStd": 28.915615415915976,
+              "LeafSampleCount": 6
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x7",
+              "Threshold": 0.2375,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 9.4300567233227746,
+              "LeafStd": 18.20224754969367,
+              "LeafSampleCount": 10
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": -0.67737140638419746,
+              "LeafStd": 9.4879590636061124,
+              "LeafSampleCount": 40
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x3",
+              "Threshold": 11.6455,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": -5.5236579298205655,
+              "LeafStd": 3.2412811432867361,
+              "LeafSampleCount": 12
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 3.2122272439334312,
+              "LeafStd": 13.233756355047799,
+              "LeafSampleCount": 38
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x1",
+              "Threshold": 4.5,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": -0.85556472192930166,
+              "LeafStd": 8.9038365047758283,
+              "LeafSampleCount": 41
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 9.0417964324165556,
+              "LeafStd": 19.111467045480996,
+              "LeafSampleCount": 9
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x3",
+              "Threshold": 59.1415,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": -0.39596968163804047,
+              "LeafStd": 6.1857350261351769,
+              "LeafSampleCount": 45
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 11.249197507321865,
+              "LeafStd": 30.671078804455213,
+              "LeafSampleCount": 5
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x4",
+              "Threshold": 9.894,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": -2.2440865338247327,
+              "LeafStd": 6.2071603683448728,
+              "LeafSampleCount": 28
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 4.305869317877157,
+              "LeafStd": 15.43087668427715,
+              "LeafSampleCount": 22
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x1",
+              "Threshold": 4.5,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": -1.024773944988953,
+              "LeafStd": 8.7643541950842714,
+              "LeafSampleCount": 41
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 7.6098149380996905,
+              "LeafStd": 18.201939741289706,
+              "LeafSampleCount": 9
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x3",
+              "Threshold": 11.448,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": -5.3163243250099139,
+              "LeafStd": 2.7210174482161249,
+              "LeafSampleCount": 11
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 2.0628673798651183,
+              "LeafStd": 12.363687048510483,
+              "LeafSampleCount": 39
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x7",
+              "Threshold": 0.218,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 6.6191295953204126,
+              "LeafStd": 17.357441366700758,
+              "LeafSampleCount": 9
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": -1.0081753746095194,
+              "LeafStd": 8.8675954689322722,
+              "LeafSampleCount": 41
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x1",
+              "Threshold": 4.5,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": -1.0054359406129958,
+              "LeafStd": 8.6409801085928919,
+              "LeafSampleCount": 41
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 6.2621737382460418,
+              "LeafStd": 17.575790253011537,
+              "LeafSampleCount": 9
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x4",
+              "Threshold": 9.894,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": -2.1615562454043964,
+              "LeafStd": 5.5872904352818908,
+              "LeafSampleCount": 28
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 3.3221376198618535,
+              "LeafStd": 14.871362335975506,
+              "LeafSampleCount": 22
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x5",
+              "Threshold": 61.952799999999996,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": -0.7973985888072368,
+              "LeafStd": 5.8206571401911784,
+              "LeafSampleCount": 43
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 6.3879721591700642,
+              "LeafStd": 24.573880232199333,
+              "LeafSampleCount": 7
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x1",
+              "Threshold": 4.5,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": -0.98773012503762336,
+              "LeafStd": 8.5646459325326969,
+              "LeafSampleCount": 41
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 5.4613219707544811,
+              "LeafStd": 16.943279334020538,
+              "LeafSampleCount": 9
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x3",
+              "Threshold": 12.862,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": -3.7544690909550975,
+              "LeafStd": 3.1540893233248575,
+              "LeafSampleCount": 14
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 1.6596162844410274,
+              "LeafStd": 12.210942547865029,
+              "LeafSampleCount": 36
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x7",
+              "Threshold": 0.218,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 4.827229872063123,
+              "LeafStd": 16.178205916261785,
+              "LeafSampleCount": 9
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": -0.91421134405776538,
+              "LeafStd": 8.71191455905499,
+              "LeafSampleCount": 41
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x3",
+              "Threshold": 9.6239999999999988,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": -5.73664694887639,
+              "LeafStd": 3.1733387984591732,
+              "LeafSampleCount": 6
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 0.89474265452918333,
+              "LeafStd": 11.018978470322628,
+              "LeafSampleCount": 44
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x1",
+              "Threshold": 4.5,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": -0.92945510676442722,
+              "LeafStd": 8.4814505404498384,
+              "LeafSampleCount": 41
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 4.690573257260322,
+              "LeafStd": 16.262884224485411,
+              "LeafSampleCount": 9
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x5",
+              "Threshold": 32.468083333333325,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": -2.0231674675033351,
+              "LeafStd": 5.0906549770951566,
+              "LeafSampleCount": 24
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 1.9986632372546604,
+              "LeafStd": 13.396938663764585,
+              "LeafSampleCount": 26
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x1",
+              "Threshold": 4.5,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": -0.844406354388212,
+              "LeafStd": 8.4405070966333557,
+              "LeafSampleCount": 41
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 4.1611463596895391,
+              "LeafStd": 16.0610229348221,
+              "LeafSampleCount": 9
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x3",
+              "Threshold": 59.1415,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": -0.57440646612469815,
+              "LeafStd": 5.225691605003,
+              "LeafSampleCount": 45
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 5.639381208532285,
+              "LeafStd": 28.168484557096313,
+              "LeafSampleCount": 5
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x7",
+              "Threshold": 1.23645,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": -0.57601416756380641,
+              "LeafStd": 10.538310496196372,
+              "LeafSampleCount": 45
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 5.5739976092045564,
+              "LeafStd": 5.4432735755193606,
+              "LeafSampleCount": 5
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x7",
+              "Threshold": 0.2375,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 3.5494941161200915,
+              "LeafStd": 14.484582012499153,
+              "LeafSampleCount": 10
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": -0.84692450603775371,
+              "LeafStd": 8.6750483529391857,
+              "LeafSampleCount": 40
+            }
+          ]
+        ]
+      },
+      {
+        "NumTrees": 42,
+        "LearningRate": 0.17,
+        "SubsampleRatio": 1,
+        "MaxDepth": 1,
+        "NumFeatures": 7,
+        "FeatureNames": [
+          "NoTumors",
+          "TotalDose",
+          "TotalVolume",
+          "AvgTumorVolume",
+          "AvgSurfaceArea",
+          "AvgEquivSA",
+          "MinShortestDistance"
+        ],
+        "InitialPrediction": 0,
+        "GoLeftIfLessOrEqual": false,
+        "ComparatorEpsilon": 0,
+        "Trees": [
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x3",
+              "Threshold": 39.215500000000006,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 36.297244736842082,
+              "LeafStd": 14.447213387557859,
+              "LeafSampleCount": 38
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 105.04895833333332,
+              "LeafStd": 32.000244308871082,
+              "LeafSampleCount": 12
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x3",
+              "Threshold": 56.0475,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 34.624410488636322,
+              "LeafStd": 17.686703487742012,
+              "LeafSampleCount": 44
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 111.27144374999999,
+              "LeafStd": 29.25225924275852,
+              "LeafSampleCount": 6
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x3",
+              "Threshold": 32.314,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 20.94196861166866,
+              "LeafStd": 11.308702823339974,
+              "LeafSampleCount": 34
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 69.1617705077041,
+              "LeafStd": 25.764903533555575,
+              "LeafSampleCount": 16
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x3",
+              "Threshold": 59.1415,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 23.784144739244034,
+              "LeafStd": 15.182677796769072,
+              "LeafSampleCount": 45
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 87.832830659523637,
+              "LeafStd": 26.697553463941237,
+              "LeafSampleCount": 5
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x3",
+              "Threshold": 31.1855,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 12.007979342013511,
+              "LeafStd": 10.28448860089188,
+              "LeafSampleCount": 32
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 48.25492857240868,
+              "LeafStd": 21.257586719963122,
+              "LeafSampleCount": 18
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x3",
+              "Threshold": 46.861999999999995,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 13.904723573066383,
+              "LeafStd": 11.816125681633363,
+              "LeafSampleCount": 41
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 52.1963219666602,
+              "LeafStd": 24.4950160914545,
+              "LeafSampleCount": 9
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x3",
+              "Threshold": 21.175,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 4.5530083079883914,
+              "LeafStd": 7.9578563947995109,
+              "LeafSampleCount": 26
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 31.029418844779318,
+              "LeafStd": 18.466213854617262,
+              "LeafSampleCount": 24
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x3",
+              "Threshold": 59.1415,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 10.302494764747575,
+              "LeafStd": 10.54552476032829,
+              "LeafSampleCount": 45
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 50.549535652150425,
+              "LeafStd": 26.697553463941219,
+              "LeafSampleCount": 5
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x3",
+              "Threshold": 16.585,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": -2.4734823425818524,
+              "LeafStd": 3.7182032660651805,
+              "LeafSampleCount": 18
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 19.971919830819367,
+              "LeafStd": 15.34714531819772,
+              "LeafSampleCount": 32
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x6",
+              "Threshold": 28.713749999999997,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 5.88818994432432,
+              "LeafStd": 8.490320652781234,
+              "LeafSampleCount": 43
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 34.329742414634765,
+              "LeafStd": 23.344526192382041,
+              "LeafSampleCount": 7
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x3",
+              "Threshold": 59.1415,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 5.358801746093822,
+              "LeafStd": 8.58998729510847,
+              "LeafSampleCount": 45
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 33.691844793548206,
+              "LeafStd": 25.83141199639476,
+              "LeafSampleCount": 5
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x3",
+              "Threshold": 18.398,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": -3.099534101995177,
+              "LeafStd": 4.6224240210720318,
+              "LeafSampleCount": 20
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 13.398769438324434,
+              "LeafStd": 13.480479528148749,
+              "LeafSampleCount": 30
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x6",
+              "Threshold": 30.148799999999998,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 3.1121609680409428,
+              "LeafStd": 7.4595318550241414,
+              "LeafSampleCount": 44
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 24.207001721226153,
+              "LeafStd": 23.562990006823885,
+              "LeafSampleCount": 6
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x3",
+              "Threshold": 16.585,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": -3.9671254989418006,
+              "LeafStd": 3.71820326606518,
+              "LeafSampleCount": 18
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 9.5504764407973,
+              "LeafStd": 12.555392777495763,
+              "LeafSampleCount": 32
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x3",
+              "Threshold": 31.1855,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": -0.31229836492542851,
+              "LeafStd": 6.289258335200631,
+              "LeafSampleCount": 32
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 11.354741499499992,
+              "LeafStd": 14.737600304679187,
+              "LeafSampleCount": 18
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x3",
+              "Threshold": 59.1415,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 1.5038278965269909,
+              "LeafStd": 6.1963633360510482,
+              "LeafSampleCount": 45
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 18.734587617279161,
+              "LeafStd": 25.265562695857902,
+              "LeafSampleCount": 5
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x3",
+              "Threshold": 15.506999999999998,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": -4.2137450178272946,
+              "LeafStd": 3.2785909776295288,
+              "LeafSampleCount": 16
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 5.921659730359659,
+              "LeafStd": 11.568550839982006,
+              "LeafSampleCount": 34
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x6",
+              "Threshold": 28.067,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 0.38589396253121128,
+              "LeafStd": 5.7192281117264558,
+              "LeafSampleCount": 42
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 11.867894665961524,
+              "LeafStd": 20.101210591721426,
+              "LeafSampleCount": 8
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x3",
+              "Threshold": 11.6455,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": -4.949897838426959,
+              "LeafStd": 2.4242545418213988,
+              "LeafSampleCount": 12
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 3.9908910046564738,
+              "LeafStd": 10.781367336042036,
+              "LeafSampleCount": 38
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x3",
+              "Threshold": 59.1415,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 0.34188043723715689,
+              "LeafStd": 5.2309396089306039,
+              "LeafSampleCount": 45
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 12.237420028092135,
+              "LeafStd": 24.986810463058568,
+              "LeafSampleCount": 5
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x7",
+              "Threshold": 0.2375,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 8.12906843292297,
+              "LeafStd": 13.345972711503476,
+              "LeafSampleCount": 10
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": -0.44340392204598866,
+              "LeafStd": 7.7824276622765272,
+              "LeafSampleCount": 40
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x6",
+              "Threshold": 22.619083333333336,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": -0.74948874051893244,
+              "LeafStd": 5.3149245711459594,
+              "LeafSampleCount": 37
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 6.1908723985026421,
+              "LeafStd": 15.442764016599373,
+              "LeafSampleCount": 13
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x3",
+              "Threshold": 11.448,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": -4.4296927003472684,
+              "LeafStd": 2.2167950748836684,
+              "LeafSampleCount": 11
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 2.3720341964699228,
+              "LeafStd": 10.144652909667636,
+              "LeafSampleCount": 39
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x7",
+              "Threshold": 0.2375,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 6.1149788716068212,
+              "LeafStd": 13.017865334431807,
+              "LeafSampleCount": 10
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": -0.62025340326268352,
+              "LeafStd": 7.5557904459558571,
+              "LeafSampleCount": 40
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x3",
+              "Threshold": 59.1415,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": -0.28503491550919213,
+              "LeafStd": 4.6543101520993879,
+              "LeafSampleCount": 45
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 8.5976965687858335,
+              "LeafStd": 24.076433274837051,
+              "LeafSampleCount": 5
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x1",
+              "Threshold": 4.5,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": -0.65696603649316954,
+              "LeafStd": 7.2917079254643555,
+              "LeafSampleCount": 41
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 5.7744437958236512,
+              "LeafStd": 13.468502189578038,
+              "LeafSampleCount": 9
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x3",
+              "Threshold": 12.862,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": -3.3589776178230997,
+              "LeafStd": 2.2033066777314034,
+              "LeafSampleCount": 14
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 1.883450766179541,
+              "LeafStd": 10.107524906581142,
+              "LeafSampleCount": 36
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x1",
+              "Threshold": 4.5,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": -0.66983635694170562,
+              "LeafStd": 7.21900038011661,
+              "LeafSampleCount": 41
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 4.967719956550023,
+              "LeafStd": 13.188460105192828,
+              "LeafSampleCount": 9
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x6",
+              "Threshold": 30.148799999999998,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": -0.50881994681711507,
+              "LeafStd": 4.5906465965241932,
+              "LeafSampleCount": 44
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 6.1170690847759177,
+              "LeafStd": 21.231313966906754,
+              "LeafSampleCount": 6
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x7",
+              "Threshold": 0.2375,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 4.4148363095122987,
+              "LeafStd": 11.668817596056797,
+              "LeafSampleCount": 10
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": -0.80668658776749869,
+              "LeafStd": 7.4361155094484417,
+              "LeafSampleCount": 40
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x3",
+              "Threshold": 12.862,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": -2.9195317492010635,
+              "LeafStd": 2.2680361585397457,
+              "LeafSampleCount": 14
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 1.4092941984412766,
+              "LeafStd": 9.80759674603316,
+              "LeafSampleCount": 36
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x1",
+              "Threshold": 4.5,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": -0.69928647484223083,
+              "LeafStd": 7.1619092815361354,
+              "LeafSampleCount": 41
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 4.0950552435822729,
+              "LeafStd": 12.43783098656913,
+              "LeafSampleCount": 9
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x5",
+              "Threshold": 32.468083333333325,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": -1.7866093207351765,
+              "LeafStd": 4.2869718621220585,
+              "LeafSampleCount": 24
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 1.9104602933970283,
+              "LeafStd": 10.742641461524919,
+              "LeafSampleCount": 26
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x3",
+              "Threshold": 59.1415,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": -0.44887935889277542,
+              "LeafStd": 4.2103742696273549,
+              "LeafSampleCount": 45
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 5.1676093225276087,
+              "LeafStd": 22.888523374296859,
+              "LeafSampleCount": 5
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x7",
+              "Threshold": 0.218,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 3.6128144479140736,
+              "LeafStd": 11.603022915739189,
+              "LeafSampleCount": 9
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": -0.67891208286298166,
+              "LeafStd": 7.2706172176692538,
+              "LeafSampleCount": 41
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x3",
+              "Threshold": 9.6239999999999988,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": -4.2334532244479171,
+              "LeafStd": 2.2298453954633168,
+              "LeafSampleCount": 6
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 0.66556966119950789,
+              "LeafStd": 8.68134874453794,
+              "LeafSampleCount": 44
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x1",
+              "Threshold": 4.5,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": -0.70000852745024211,
+              "LeafStd": 7.1101900512955085,
+              "LeafSampleCount": 41
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 3.5471507327461516,
+              "LeafStd": 11.677890351730817,
+              "LeafSampleCount": 9
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x5",
+              "Threshold": 32.468083333333325,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": -1.4393693876588871,
+              "LeafStd": 4.0908090464595235,
+              "LeafSampleCount": 24
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 1.4315688880113575,
+              "LeafStd": 10.53805656249113,
+              "LeafSampleCount": 26
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x1",
+              "Threshold": 4.5,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": -0.6339115421645809,
+              "LeafStd": 7.0844738896727355,
+              "LeafSampleCount": 41
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 3.1345990699853226,
+              "LeafStd": 11.533640129224842,
+              "LeafSampleCount": 9
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x7",
+              "Threshold": 1.23645,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": -0.43484792409701872,
+              "LeafStd": 8.3511768404325029,
+              "LeafSampleCount": 45
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 4.2823203714591,
+              "LeafStd": 4.2113474492947756,
+              "LeafSampleCount": 5
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x5",
+              "Threshold": 61.952799999999996,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": -0.52630205677052588,
+              "LeafStd": 4.215264883092944,
+              "LeafSampleCount": 43
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 3.4515782882377462,
+              "LeafStd": 18.657645490248218,
+              "LeafSampleCount": 7
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x7",
+              "Threshold": 0.2375,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 2.6482464583154339,
+              "LeafStd": 10.411638160916795,
+              "LeafSampleCount": 10
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": -0.63031287836582706,
+              "LeafStd": 7.2394874535277038,
+              "LeafSampleCount": 40
+            }
+          ]
+        ]
+      },
+      {
+        "NumTrees": 42,
+        "LearningRate": 0.17,
+        "SubsampleRatio": 1,
+        "MaxDepth": 1,
+        "NumFeatures": 7,
+        "FeatureNames": [
+          "NoTumors",
+          "TotalDose",
+          "TotalVolume",
+          "AvgTumorVolume",
+          "AvgSurfaceArea",
+          "AvgEquivSA",
+          "MinShortestDistance"
+        ],
+        "InitialPrediction": 0,
+        "GoLeftIfLessOrEqual": false,
+        "ComparatorEpsilon": 0,
+        "Trees": [
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x3",
+              "Threshold": 39.215500000000006,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 31.53937368421051,
+              "LeafStd": 12.731867460197844,
+              "LeafSampleCount": 38
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 92.925016666666622,
+              "LeafStd": 28.049393512808635,
+              "LeafSampleCount": 12
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x3",
+              "Threshold": 52.102500000000006,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 29.467697251937956,
+              "LeafStd": 15.088326370063317,
+              "LeafSampleCount": 43
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 93.310575738095253,
+              "LeafStd": 26.5907443487775,
+              "LeafSampleCount": 7
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x3",
+              "Threshold": 32.314,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 18.278936176148875,
+              "LeafStd": 10.040513882736311,
+              "LeafSampleCount": 34
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 60.772045623183651,
+              "LeafStd": 23.142296471541609,
+              "LeafSampleCount": 16
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x3",
+              "Threshold": 59.1415,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 20.68989415756786,
+              "LeafStd": 13.191041257246038,
+              "LeafSampleCount": 45
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 78.367821535249263,
+              "LeafStd": 23.366759033670057,
+              "LeafSampleCount": 5
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x3",
+              "Threshold": 31.1855,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 10.433649909122916,
+              "LeafStd": 9.0423739420638434,
+              "LeafSampleCount": 32
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 42.450956059139521,
+              "LeafStd": 18.926099813510216,
+              "LeafSampleCount": 18
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x3",
+              "Threshold": 59.1415,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 13.826486186418496,
+              "LeafStd": 11.310297202716361,
+              "LeafSampleCount": 45
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 57.828629344203165,
+              "LeafStd": 23.366759033670025,
+              "LeafSampleCount": 5
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x3",
+              "Threshold": 21.175,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 3.6185851863424148,
+              "LeafStd": 6.8675054767039825,
+              "LeafSampleCount": 26
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 27.596868999844666,
+              "LeafStd": 15.925778634831536,
+              "LeafSampleCount": 24
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x3",
+              "Threshold": 46.861999999999995,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 7.7442219638372913,
+              "LeafStd": 9.0073305422626291,
+              "LeafSampleCount": 41
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 34.478399808982843,
+              "LeafStd": 20.153650239093643,
+              "LeafSampleCount": 9
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x3",
+              "Threshold": 16.585,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": -2.240931345427454,
+              "LeafStd": 3.25110431884401,
+              "LeafSampleCount": 18
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 17.544571381880605,
+              "LeafStd": 13.596496440621605,
+              "LeafSampleCount": 32
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x3",
+              "Threshold": 59.1415,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 5.7820523107938016,
+              "LeafStd": 7.8614323871047427,
+              "LeafSampleCount": 45
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 34.462389523268243,
+              "LeafStd": 23.366759033670021,
+              "LeafSampleCount": 5
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x6",
+              "Threshold": 28.713749999999997,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 4.1286216355605942,
+              "LeafStd": 7.50397706434323,
+              "LeafSampleCount": 43
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 25.921120000086631,
+              "LeafStd": 19.931357117173608,
+              "LeafSampleCount": 7
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x3",
+              "Threshold": 16.585,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": -3.5447875875850325,
+              "LeafStd": 3.2511043188440105,
+              "LeafSampleCount": 18
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 11.304949685943487,
+              "LeafStd": 11.780670088867959,
+              "LeafSampleCount": 32
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x3",
+              "Threshold": 31.1855,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 0.33620343346459419,
+              "LeafStd": 6.0186506502922725,
+              "LeafSampleCount": 32
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 13.141212623848425,
+              "LeafStd": 13.608195563318334,
+              "LeafSampleCount": 18
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x3",
+              "Threshold": 59.1415,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 2.2521739669550898,
+              "LeafStd": 6.1034746974865106,
+              "LeafSampleCount": 45
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 20.782290256027174,
+              "LeafStd": 22.681438420003925,
+              "LeafSampleCount": 5
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x3",
+              "Threshold": 15.506999999999998,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": -4.0627138279891462,
+              "LeafStd": 2.7552936653759672,
+              "LeafSampleCount": 16
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 6.9226065728268171,
+              "LeafStd": 10.680673568651029,
+              "LeafSampleCount": 34
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x6",
+              "Threshold": 28.067,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 0.81791009429387607,
+              "LeafStd": 5.42442367392183,
+              "LeafSampleCount": 42
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 13.381361736141764,
+              "LeafStd": 18.055714498837819,
+              "LeafSampleCount": 8
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x3",
+              "Threshold": 18.398,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": -2.6744334169029154,
+              "LeafStd": 3.2338251958309141,
+              "LeafSampleCount": 20
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 5.6951085384374736,
+              "LeafStd": 10.839523619889123,
+              "LeafSampleCount": 30
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x3",
+              "Threshold": 59.1415,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 0.69176737478161943,
+              "LeafStd": 4.9696919309732586,
+              "LeafSampleCount": 45
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 13.256615204266355,
+              "LeafStd": 22.321521737153624,
+              "LeafSampleCount": 5
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x6",
+              "Threshold": 22.619083333333336,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": -0.3852834859377961,
+              "LeafStd": 5.1209758229956934,
+              "LeafSampleCount": 37
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 7.3159964250382563,
+              "LeafStd": 14.008826937242075,
+              "LeafSampleCount": 13
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x3",
+              "Threshold": 11.6455,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": -4.284602023490903,
+              "LeafStd": 2.0293317919124685,
+              "LeafSampleCount": 12
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 3.1190202593395773,
+              "LeafStd": 9.41059939172695,
+              "LeafSampleCount": 38
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x7",
+              "Threshold": 0.2375,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 7.0588223377782526,
+              "LeafStd": 11.293538596659273,
+              "LeafSampleCount": 10
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": -0.37222401380454145,
+              "LeafStd": 7.1446697990275956,
+              "LeafSampleCount": 40
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x3",
+              "Threshold": 59.1415,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": -0.006158464168138502,
+              "LeafStd": 4.376367018153057,
+              "LeafSampleCount": 45
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 9.3015038065629874,
+              "LeafStd": 21.771128939285784,
+              "LeafSampleCount": 5
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x3",
+              "Threshold": 12.862,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": -3.2134937536492738,
+              "LeafStd": 2.1041969041533979,
+              "LeafSampleCount": 14
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 2.3155592975457289,
+              "LeafStd": 9.32470603335637,
+              "LeafSampleCount": 36
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x7",
+              "Threshold": 0.2375,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 5.4959819438199577,
+              "LeafStd": 10.694756435689673,
+              "LeafSampleCount": 10
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": -0.57779262612344373,
+              "LeafStd": 7.0099439717945433,
+              "LeafSampleCount": 40
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x3",
+              "Threshold": 59.1415,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": -0.21461472229399436,
+              "LeafStd": 4.0927824299531625,
+              "LeafSampleCount": 45
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 7.2183194899274161,
+              "LeafStd": 21.49537440467018,
+              "LeafSampleCount": 5
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x7",
+              "Threshold": 0.2375,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 4.471789634552783,
+              "LeafStd": 10.327347896524961,
+              "LeafSampleCount": 10
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": -0.569443258500243,
+              "LeafStd": 7.0097511242512587,
+              "LeafSampleCount": 40
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x5",
+              "Threshold": 61.952799999999996,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": -0.43656827592996383,
+              "LeafStd": 4.332762721843471,
+              "LeafSampleCount": 43
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 5.2832533785097811,
+              "LeafStd": 17.598226694280338,
+              "LeafSampleCount": 7
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x3",
+              "Threshold": 11.448,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": -3.2042812508083882,
+              "LeafStd": 1.9595914379916204,
+              "LeafSampleCount": 11
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 1.2913249774382987,
+              "LeafStd": 8.6159506138781747,
+              "LeafSampleCount": 39
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x1",
+              "Threshold": 4.5,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": -0.622439615210205,
+              "LeafStd": 6.7382160898907264,
+              "LeafSampleCount": 41
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 4.2294584359350642,
+              "LeafStd": 10.654008839329682,
+              "LeafSampleCount": 9
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x5",
+              "Threshold": 32.468083333333325,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": -1.5659744384783887,
+              "LeafStd": 3.9638189499616794,
+              "LeafSampleCount": 24
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 1.8459931128581912,
+              "LeafStd": 9.7673514659255538,
+              "LeafSampleCount": 26
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x1",
+              "Threshold": 4.5,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": -0.60408878933144783,
+              "LeafStd": 6.682953253680977,
+              "LeafSampleCount": 41
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 3.7122178803977395,
+              "LeafStd": 10.482645952942004,
+              "LeafSampleCount": 9
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x3",
+              "Threshold": 9.6239999999999988,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": -4.0402693396827489,
+              "LeafStd": 1.7973031777252388,
+              "LeafSampleCount": 6
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 0.71397141144814547,
+              "LeafStd": 7.9431268608353687,
+              "LeafSampleCount": 44
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x7",
+              "Threshold": 0.218,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 3.3884393360907703,
+              "LeafStd": 9.9927345456869148,
+              "LeafSampleCount": 9
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": -0.59859169244757882,
+              "LeafStd": 6.7384814796135872,
+              "LeafSampleCount": 41
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x4",
+              "Threshold": 16.140833333333333,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": -0.54864849725471065,
+              "LeafStd": 4.0296904970115186,
+              "LeafSampleCount": 42
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 3.4981004289131019,
+              "LeafStd": 16.00446374043262,
+              "LeafSampleCount": 8
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x1",
+              "Threshold": 4.5,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": -0.565531153097502,
+              "LeafStd": 6.6445389417321419,
+              "LeafSampleCount": 41
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 3.0320308345201519,
+              "LeafStd": 10.007257404971389,
+              "LeafSampleCount": 9
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x6",
+              "Threshold": 13.789874999999999,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": -1.7294908329953897,
+              "LeafStd": 3.9552365680591715,
+              "LeafSampleCount": 19
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 1.1698248716409649,
+              "LeafStd": 8.7639216835692757,
+              "LeafSampleCount": 31
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x1",
+              "Threshold": 4.5,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": -0.5360240031115987,
+              "LeafStd": 6.6096255795147378,
+              "LeafSampleCount": 41
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 2.7558341820622556,
+              "LeafStd": 9.8618330035021042,
+              "LeafSampleCount": 9
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x5",
+              "Threshold": 32.468083333333325,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": -1.2907161121169826,
+              "LeafStd": 3.6375481122657862,
+              "LeafSampleCount": 24
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 1.2816296617278815,
+              "LeafStd": 9.449106306916228,
+              "LeafSampleCount": 26
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x7",
+              "Threshold": 1.23135,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": -0.40378066718273414,
+              "LeafStd": 7.614379633672657,
+              "LeafSampleCount": 44
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 3.2854754171262819,
+              "LeafStd": 3.4868070975628855,
+              "LeafSampleCount": 6
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x7",
+              "Threshold": 0.2375,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 2.4908427575002436,
+              "LeafStd": 8.9266977119908155,
+              "LeafSampleCount": 10
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": -0.58232074908067488,
+              "LeafStd": 6.7102650341329522,
+              "LeafSampleCount": 40
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x3",
+              "Threshold": 59.1415,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": -0.36615026093394942,
+              "LeafStd": 3.5723757419893931,
+              "LeafSampleCount": 45
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 3.5635415519602653,
+              "LeafStd": 20.031175587107192,
+              "LeafSampleCount": 5
+            }
+          ],
+          [
+            {
+              "IsLeaf": false,
+              "SplitFeature": "x1",
+              "Threshold": 4.5,
+              "LeftChild": 2,
+              "RightChild": 3,
+              "MultiValue": [],
+              "LeafStd": 0,
+              "LeafSampleCount": 0
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": -0.50839456304395036,
+              "LeafStd": 6.5563131481635653,
+              "LeafSampleCount": 41
+            },
+            {
+              "IsLeaf": true,
+              "SplitFeature": "",
+              "Threshold": [],
+              "LeftChild": 0,
+              "RightChild": 0,
+              "MultiValue": 2.4396846977282309,
+              "LeafStd": 9.4390485611612043,
+              "LeafSampleCount": 9
+            }
+          ]
+        ]
+      }
+    ]
+  },
+  "SplitRules": {
+    "GoLeftIfLessOrEqual": false,
+    "NaNDirection": "none",
+    "Surrogates": []
+  },
+  "Diagnostics": {
+    "SplitUsageByFeature": [
+      {
+        "Feature": "NoTumors",
+        "Count": 0
+      },
+      {
+        "Feature": "TotalDose",
+        "Count": 0
+      },
+      {
+        "Feature": "TotalVolume",
+        "Count": 0
+      },
+      {
+        "Feature": "AvgTumorVolume",
+        "Count": 0
+      },
+      {
+        "Feature": "AvgSurfaceArea",
+        "Count": 0
+      },
+      {
+        "Feature": "AvgEquivSA",
+        "Count": 0
+      },
+      {
+        "Feature": "MinShortestDistance",
+        "Count": 0
+      }
+    ]
+  },
+  "PostProcessing": {
+    "ClampNonNegative": true,
+    "CapAtReference": true,
+    "Monotone": {
+      "Method": "weighted_isotonic",
+      "Weights": [
+        0.5,
+        1,
+        0.5
+      ],
+      "Epsilon": 1E-6,
+      "Strict": false
+    }
+  },
+  "DataStats": {
+    "OutputMeans": [
+      67.266098,
+      52.797656,
+      46.27192800000001
+    ],
+    "OutputStd": [
+      44.977799511902013,
+      35.950084880829429,
+      31.933284062308683
+    ],
+    "OutputMin": [
+      22.65,
+      17.55,
+      15.27
+    ],
+    "OutputMax": [
+      225.999,
+      175.06,
+      152.1
+    ]
+  },
+  "Provenance": {
+    "MATLAB": "2024b"
+  },
+  "Integrity": {
+    "CoreSHA256": "2a20a5e0fc797b2eb2499c08752f7c8e8954aac29cb31938cf6294ca4c74bfa7"
+  }
+}
