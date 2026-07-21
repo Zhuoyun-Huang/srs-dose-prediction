@@ -1,42 +1,35 @@
-# SRS Dose Prediction
+# SRS Target Information
 
-Machine learning framework for predicting normal-brain dose-volume metrics in single-isocenter multi-target (SIMT) stereotactic radiosurgery (SRS).
+ESAPI tool for automatically extracting geometric information from target lesions in Eclipse treatment plans.
 
-This project provides an Eclipse Scripting API (ESAPI) application that automatically extracts treatment planning features from Eclipse and predicts normal-brain dose-volume metrics using Gradient Boosted Regression Trees (GBRT). The software is intended to assist treatment planning by providing rapid estimates of V50%, V60%, and V66.7% before plan optimization.
+This script identifies all non-empty structures whose IDs begin with **"Exp"** and summarizes their geometric characteristics in an interactive table. It is intended for research workflows involving single-isocenter multi-target stereotactic radiosurgery (SIMT SRS).
 
 ---
 
 ## Features
 
-- Automatic extraction of treatment planning features from Eclipse
-- Prediction of:
-  - **V50%**
-  - **V60%**
-  - **V66.7%**
-- Multiple machine learning models:
-  - Unclustered Individual
-  - Unclustered Multi-output (3-in-1)
-  - Clustered Individual
-  - Clustered Multi-output (3-in-1)
-- Automatic lesion clustering
-- Prediction uncertainty estimation
-- Interactive WPF graphical interface
-- Automatic visualization of prediction results
+- Automatically detects all **Exp*** target structures
+- Calculates:
+  - Volume (cc)
+  - Bounding-box maximum dimension (mm)
+  - Equivalent-sphere diameter (mm)
+  - Diameter ratio (equivalent-sphere diameter / bounding-box maximum dimension)
+- Interactive WPF interface
+- Sortable and resizable table
+- Automatic handling of missing or invalid structures
 
 ---
 
 ## Repository Structure
 
 ```
-SRS-Dose-Prediction/
+SRS-Target-Information/
 │
-├── GUI_SIMT_SRS_DosePrediction.cs
+├── GUI_SRS_Target_Information.cs
 ├── README.md
 ├── LICENSE
 └── .gitignore
 ```
-
-The trained model JSON files are required for prediction but are not included in this repository.
 
 ---
 
@@ -47,72 +40,87 @@ The trained model JSON files are required for prediction but are not included in
 - .NET Framework 4.5 or newer
 - Microsoft Visual Studio
 
-The following ESAPI assemblies are required and must be referenced from your local Eclipse installation:
+Required ESAPI assemblies (not included):
 
 - `VMS.TPS.Common.Model.API.dll`
 - `VMS.TPS.Common.Model.Types.dll`
 
-These proprietary DLLs are **not distributed** with this repository.
+These DLLs must be referenced from your local Eclipse installation.
 
 ---
 
 ## Installation
 
-1. Clone this repository.
+1. Clone the repository.
 
 ```bash
-git clone https://github.com/Zhuoyun-Huang/srs-dose-prediction.git
+git clone https://github.com/Zhuoyun-Huang/srs-target-information.git
 ```
 
 2. Open the project in Visual Studio.
 
 3. Reference the ESAPI DLLs from your local Eclipse installation.
 
-4. Place the trained model JSON files in the directory specified in the `Paths` class.
+4. Build the script.
 
-5. Build the project and launch the script through Eclipse.
+5. Launch the script from Eclipse.
 
 ---
 
 ## Workflow
 
-1. Load a patient in Eclipse.
-2. Select the target lesions.
-3. The script automatically extracts geometric and dosimetric features.
-4. Machine learning models estimate:
-   - V50%
-   - V60%
-   - V66.7%
-5. Prediction results and uncertainty estimates are displayed in the graphical interface.
+1. Open a patient in Eclipse.
+2. Load a valid Structure Set.
+3. Run the script.
+4. The software automatically detects all structures whose IDs begin with **"Exp"**.
+5. A summary table is displayed containing:
+
+- Structure ID
+- Volume (cc)
+- Bounding-box maximum dimension (mm)
+- Equivalent-sphere diameter (mm)
+- Diameter ratio
 
 ---
 
 ## Method
 
-The prediction models were developed using **Gradient Boosted Regression Trees (GBRT)**.
+The script computes several geometric descriptors for each lesion.
 
-The framework supports:
+### Equivalent-Sphere Diameter
 
-- Individual-output models
-- Multi-output (3-in-1) models
-- Unclustered prediction
-- Cluster-specific prediction
+The equivalent-sphere diameter is calculated from the lesion volume by assuming a sphere with the same volume.
 
-allowing comparison between different modeling strategies for predicting normal-brain dose-volume metrics in SIMT SRS.
+### Bounding-Box Maximum Dimension
+
+The maximum lesion dimension is estimated from the axis-aligned mesh bounding box provided by Eclipse.
+
+### Diameter Ratio
+
+The diameter ratio is defined as
+
+```
+min(Equivalent Sphere Diameter,
+    Bounding-Box Maximum Dimension)
+────────────────────────────────────
+max(Equivalent Sphere Diameter,
+    Bounding-Box Maximum Dimension)
+```
+
+This provides a simple geometric descriptor of lesion shape.
+
+> **Note:** This diameter ratio is **not** the conventional three-dimensional sphericity metric.
 
 ---
 
-## Publication
+## Example Output
 
-If you use this software in academic work, please cite:
+For each Exp* lesion, the software reports:
 
-> Huang Z, et al.
->
-> *Machine learning prediction of normal-brain dose-volume metrics for single-isocenter multi-target stereotactic radiosurgery.*
->
-> Journal of Radiosurgery and SBRT.
-
-(Update with the final citation once published.)
+| Structure | Volume (cc) | Bounding-box Max Dimension (mm) | Equivalent-Sphere Diameter (mm) | Diameter Ratio |
+|-----------|------------:|--------------------------------:|--------------------------------:|---------------:|
+| Exp01 | 1.82 | 18.6 | 15.1 | 0.81 |
+| Exp02 | 0.94 | 14.3 | 12.2 | 0.85 |
 
 ---
 
@@ -120,9 +128,9 @@ If you use this software in academic work, please cite:
 
 This software is provided for **research and educational purposes only**.
 
-It has **not** been approved for clinical use and should **not** be used as the sole basis for clinical decision-making.
+It has **not** been validated for clinical use and should **not** be used as the sole basis for clinical decision-making.
 
-Users are responsible for validating the software before any clinical application.
+Users are responsible for independently verifying all measurements before any clinical application.
 
 ---
 
